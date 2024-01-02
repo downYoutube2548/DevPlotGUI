@@ -1,0 +1,17 @@
+name: DevPlotGUI
+version: '${version}'
+main: com.downyoutube.devplotgui.devplotgui.DevPlotGUI
+api-version: 1.19
+authors: [ downYoutube2548 ]
+depend:
+  - PlotSquared
+  - NBTAPI
+softdepend:
+  - HeadDatabase
+loadbefore:
+  - PlotSquared
+commands:
+  testplot:
+    permission: op
+  devplot:
+    permission: op

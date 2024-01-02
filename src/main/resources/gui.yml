@@ -1,0 +1,473 @@
+gui:
+  main:
+    title: "&8Plot Setting GUI"
+    rows: 4
+    item:
+      border: [ 0,8,9,17,18,26,27,35 ]
+      player_plot: [ 11 ]
+      manage_members: [ 13 ]
+      manage_flags: [ 15 ]
+      close: [ 31 ]
+
+  plot:
+    title: "&8All Plots"
+    rows: 5
+    plot_icon:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: GRASS_BLOCK
+      count: 1
+      name: "&aPlot: (%world%) %id%"
+      lores:
+        - "&8Description: &7%description%"
+        - " "
+        - "&eClick to teleport!"
+      flags:
+        - HIDE_ATTRIBUTES
+    item:
+      border: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+      next: [ 44 ]
+      previous: [ 36 ]
+      close: [ 40 ]
+      back: [ 39 ]
+      claimplot: [ 41 ]
+
+  manage_members:
+    title: "&8Manage Members"
+    rows: 4
+    item:
+      border: [ 0,8,9,17,18,26,27,35 ]
+      close: [ 31 ]
+      back: [ 30 ]
+      members: [ 11 ]
+      trusted: [ 13 ]
+      denied: [ 15 ]
+
+  manage_added:
+    title: "&8Manage Added"
+    title_remove: "Remove Added"
+    rows: 5
+    members_icon:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: PLAYER_HEAD
+      count: 1
+      skin: "%username%"
+      name: "&a%username%"
+      lores:
+        - " "
+        - "&7ชื่อเล่น:"
+        - "&f%displayname%"
+        - " "
+        - "&7สถานะ: %status%"
+    members_icon_remove:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: PLAYER_HEAD
+      count: 1
+      skin: "%username%"
+      name: "&c&lREMOVE&r &f%username%"
+      lores:
+        - " "
+        - "&7ชื่อเล่น:"
+        - "&f%displayname%"
+        - " "
+        - "&eClick to remove!"
+    item:
+      default:
+        border: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+        close: [ 40 ]
+        back: [ 39 ]
+        add_member: [ 42 ]
+        remove_member: [ 43 ]
+        next: [ 44 ]
+        previous: [ 36 ]
+      remove:
+        border_remove: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+        close: [ 40 ]
+        back: [ 39 ]
+        next: [ 44 ]
+        previous: [ 36 ]
+
+  manage_trusted:
+    title: "&8Manage Trusted"
+    title_remove: "Remove Trusted"
+    rows: 5
+    members_icon:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: PLAYER_HEAD
+      count: 1
+      skin: "%username%"
+      name: "&b%username%"
+      lores:
+        - " "
+        - "&7ชื่อเล่น:"
+        - "&f%displayname%"
+        - " "
+        - "&7สถานะ: %status%"
+    members_icon_remove:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: PLAYER_HEAD
+      count: 1
+      skin: "%username%"
+      name: "&c&lREMOVE&r &f%username%"
+      lores:
+        - " "
+        - "&7ชื่อเล่น:"
+        - "&f%displayname%"
+        - " "
+        - "&eClick to remove!"
+    item:
+      default:
+        border: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+        close: [ 40 ]
+        back: [ 39 ]
+        add_trusted: [ 42 ]
+        remove_trusted: [ 43 ]
+        next: [ 44 ]
+        previous: [ 36 ]
+      remove:
+        border_remove: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+        close: [ 40 ]
+        back: [ 39 ]
+        next: [ 44 ]
+        previous: [ 36 ]
+
+  manage_denied:
+    title: "&8Manage Denied"
+    title_remove: "Remove Denied"
+    rows: 5
+    members_icon:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: PLAYER_HEAD
+      count: 1
+      skin: "%username%"
+      name: "&c%username%"
+      lores:
+        - " "
+        - "&7ชื่อเล่น:"
+        - "&f%displayname%"
+        - " "
+        - "&7สถานะ: %status%"
+    members_icon_remove:
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 ]
+      type: PLAYER_HEAD
+      count: 1
+      skin: "%username%"
+      name: "&c&lREMOVE&r &f%username%"
+      lores:
+        - " "
+        - "&7ชื่อเล่น:"
+        - "&f%displayname%"
+        - " "
+        - "&eClick to remove!"
+    item:
+      default:
+        border: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+        close: [ 40 ]
+        back: [ 39 ]
+        add_denied: [ 42 ]
+        remove_denied: [ 43 ]
+        next: [ 44 ]
+        previous: [ 36 ]
+      remove:
+        border_remove: [ 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44 ]
+        close: [ 40 ]
+        back: [ 39 ]
+        next: [ 44 ]
+        previous: [ 36 ]
+
+  manage_flags:
+    title: "&8Flags Setting"
+    rows: 6
+    flag_icon:
+      type: GRAY_DYE
+      count: 1
+      slot: [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 ]
+      name: "&a%flag%"
+      lores:
+        - "&7หมวดหมู่: &e&o%category%"
+        - " "
+        - "&7รายละเอียด:"
+        - "&f%description_1%"
+        - "&f%description_2%"
+        - " "
+        - "&7Current Value:"
+        - "&b%value%"
+        - " "
+        - "&eClick to set!"
+      flags:
+        - HIDE_ATTRIBUTES
+        - HIDE_ENCHANTS
+    item:
+      border: [ 0,1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53 ]
+      close: [ 49 ]
+      back: [ 48 ]
+      next: [ 53 ]
+      previous: [ 45 ]
+
+
+item:
+  close:
+    type: BARRIER
+    count: 1
+    name: "&cClose"
+
+  back:
+    type: ARROW
+    count: 1
+    name: "&eBack"
+
+  previous:
+    type: PLAYER_HEAD
+    count: 1
+    name: "&aPrevious"
+    skin: "HDB:7827"
+
+  next:
+    type: PLAYER_HEAD
+    count: 1
+    name: "&aNext"
+    skin: "HDB:7826"
+
+  border:
+    type: BLACK_STAINED_GLASS_PANE
+    count: 1
+    name: "&r "
+
+  everyone:
+    type: NETHER_STAR
+    count: 1
+    name: "&bEveryone"
+
+  border_remove:
+    type: RED_STAINED_GLASS_PANE
+    count: 1
+    name: "&r "
+
+  player_plot:
+    type: GRASS_BLOCK
+    count: 1
+    name: "&aYour Plots"
+    lores:
+      - "&7โซนทั้งหมดที่คุณมีจะอยู่"
+      - "&7ที่นี่!"
+      - " "
+      - "&7จำนวนโซนทั้งหมด:"
+      - "&a%amount% &f/ &a%max% โซน"
+      - " "
+      - "&eClick to view your plots!"
+    shining: false
+
+  manage_members:
+    type: PLAYER_HEAD
+    count: 1
+    name: "&aManage Member"
+    skin: "%player%"
+    lores:
+      - "&7จัดการสมาชิกภายในโซน"
+      - "&7ของคุณ"
+      - " "
+      - "&eClick to manage!"
+    shining: false
+
+  manage_flags:
+    type: IRON_AXE
+    count: 1
+    name: "&aSettings"
+    lores:
+      - "&7การตั้งค่าทั้งหมดของโซน"
+      - " "
+      - "&eClick to manage!"
+    shining: false
+    flags:
+      - HIDE_ATTRIBUTES
+
+  claimplot:
+    type: LIME_STAINED_GLASS
+    count: 1
+    name: "&aClaim More Plot"
+    lores:
+      - "&7เพิ่มจำนวนโซนของคุณ"
+      - " "
+      - "&eClick to claim!"
+
+
+  members:
+    type: PLAYER_HEAD
+    skin: "%player%"
+    count: 1
+    name: "&aMembers"
+    lores:
+      - "&7สมาชิกที่ถูก add ทั้งหมด"
+      - "&7ภายในโซน"
+      - " "
+      - "&7จำนวนสมาชิกทั้งหมด:"
+      - "&a%amount% คน"
+      - " "
+      - "&eClick to manage!"
+
+  trusted:
+    type: NETHER_STAR
+    count: 1
+    name: "&bTrusted"
+    lores:
+      - "&7สมาชิกที่ถูก trust ทั้งหมด"
+      - "&7ภายในโซน"
+      - " "
+      - "&7จำนวนสมาชิกทั้งหมด:"
+      - "&b%amount% คน"
+      - " "
+      - "&eClick to manage!"
+
+  denied:
+    type: TRIDENT
+    count: 1
+    name: "&cDenied"
+    lores:
+      - "&7ผู้เล่นที่ถูกแบนออกจาก"
+      - "&7โซนทั้งหมด"
+      - " "
+      - "&7จำนวนผู้เล่นที่ถูกแบน:"
+      - "&c%amount% คน"
+      - " "
+      - "&eClick to manage!"
+    flags:
+      - HIDE_ATTRIBUTES
+
+  add_member:
+    type: LIME_STAINED_GLASS
+    count: 1
+    name: "&aAdd Member"
+    lores:
+      - "&7เพิ่มสมาชิกในโซน"
+      - " "
+      - "&eClick to add!"
+
+  remove_member:
+    type: RED_STAINED_GLASS
+    count: 1
+    name: "&cRemove Member"
+    lores:
+      - "&7ลบสมาชิกในโซน"
+      - " "
+      - "&eClick to remove!"
+
+  add_trusted:
+    type: LIME_STAINED_GLASS
+    count: 1
+    name: "&aAdd Trusted"
+    lores:
+      - "&7เพิ่มสมาชิกในโซน"
+      - " "
+      - "&eClick to add!"
+
+  remove_trusted:
+    type: RED_STAINED_GLASS
+    count: 1
+    name: "&cRemove Trusted"
+    lores:
+      - "&7ลบสมาชิกในโซน"
+      - " "
+      - "&eClick to remove!"
+
+  add_denied:
+    type: LIME_STAINED_GLASS
+    count: 1
+    name: "&aAdd Denied"
+    lores:
+      - "&7แบนผู้เล่นออกจากโซน"
+      - " "
+      - "&eClick to add!"
+
+  remove_denied:
+    type: RED_STAINED_GLASS
+    count: 1
+    name: "&cRemove Denied"
+    lores:
+      - "&7ลบผู้เล่นออกจากรายชื่อแบน"
+      - " "
+      - "&eClick to remove!"
+
+flags_setting_icon:
+  pvp: IRON_SWORD
+  farewell: PLAYER_HEAD:HDB:9356
+  hostile-interact: GOLDEN_HORSE_ARMOR
+  break: DIAMOND_PICKAXE
+  instabreak: GOLDEN_PICKAXE
+  hanging-break: WOODEN_PICKAXE
+  pve: PIG_SPAWN_EGG
+  plot-title: NAME_TAG
+  explosion: TNT
+  vehicle-use: MINECART
+  music: MUSIC_DISC_PIGSTEP
+  player-interact: PLAYER_HEAD
+  tamed-interact: GOLDEN_APPLE
+  place: GRASS_BLOCK
+  no-worldedit: WOODEN_AXE
+  animal-attack: IRON_AXE
+  misc-interact: CRAFTING_TABLE
+  feed: COOKED_BEEF
+  gamemode: NETHER_STAR
+  animal-interact: CHICKEN_SPAWN_EGG
+  hanging-place: ARMOR_STAND
+  tamed-attack: SADDLE
+  fly: FEATHER
+  time: CLOCK
+  use: OAK_DOOR
+  weather: WATER_BUCKET
+  greeting: PLAYER_HEAD:HDB:10220
+  hostile-attack: WOODEN_SWORD
+  invincible: NETHER_STAR
+  vehicle-place: BIRCH_BOAT
+  vehicle-break: DARK_OAK_BOAT
+  notify-enter: BELL
+  heal: BEACON
+  notify-leave: BELL
+  description: OAK_SIGN
+  disable-physics: SAND
+  titles: BIRCH_SIGN
+  ice-form: ICE
+  entity-change-block: END_STONE
+  keep-inventory: ENDER_CHEST
+  deny-teleport: ENDER_PEARL
+  copper-oxide: WEATHERED_COPPER
+  misc-place: FIREWORK_ROCKET
+  mob-place: CREEPER_SPAWN_EGG
+  kelp-grow: KELP
+  misc-cap: FIREWORK_ROCKET
+  liquid-flow: LAVA_BUCKET
+  hide-info: PLAYER_HEAD:HDB:38869
+  leaf-decay: OAK_LEAVES
+  ice-melt: PACKED_ICE
+  crop-grow: OAK_SAPLING
+  redstone: REDSTONE
+  vine-grow: VINE
+  hostile-cap: GOLDEN_HORSE_ARMOR
+  item-drop: ARROW
+  mycel-grow: MYCELIUM
+  block-burn: FIRE_CHARGE
+  drop-protection: PLAYER_HEAD:HDB:1191
+  animal-cap: COW_SPAWN_EGG
+  misc-break: COMPOSTER
+  snow-form: SNOW
+  entity-cap: AXOLOTL_BUCKET
+  mob-cap: ZOMBIE_SPAWN_EGG
+  block-ignition: FLINT_AND_STEEL
+  grass-grow: GRASS_BLOCK
+  villager-interact: VILLAGER_SPAWN_EGG
+  device-interact: FLOWER_POT
+  blocked-cmds: COMMAND_BLOCK
+  chat: ENDER_EYE
+  deny-portal-travel: PLAYER_HEAD:HDB:1109
+  snow-melt: SNOW
+  lectern-read-book: LECTERN
+  prevent-creative-copy: ITEM_FRAME
+  soil-dry: FARMLAND
+  coral-dry: FIRE_CORAL
+  guest-gamemode: NETHER_STAR
+  untrusted-visit: PLAYER_HEAD
+  deny-portals: END_PORTAL_FRAME
+  deny-exit: BARRIER
+  vehicle-cap: MINECART
+  mob-break: CREEPER_SPAWN_EGG
+  price: EMERALD
+  server-plot: ENCHANTED_GOLDEN_APPLE
+  keep: CLOCK
